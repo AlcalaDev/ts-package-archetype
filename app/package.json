@@ -1,0 +1,35 @@
+{
+  "name": "@alcaladev/ts-package-archetype",
+  "version": "0.0.1",
+  "description": "base example project to generate npm packages",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "test": "test",
+    "dist:esm": "tsc -p tsconfig-esm.json && tsc-alias -p tsconfig-esm.json",
+    "dist:cjs": "tsc -p tsconfig-cjs.json && tsc-alias -p tsconfig-cjs.json",
+    "dist": "rm -rf dist && yarn dist:cjs && yarn dist:esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlcalaDev/ts-package-archetype.git"
+  },
+  "author": "AlcalaDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlcalaDev/ts-package-archetype/issues"
+  },
+  "homepage": "https://github.com/AlcalaDev/ts-package-archetype#readme",
+  "devDependencies": {
+    "eslint": "^9.12.0",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.6.3"
+  }
+}

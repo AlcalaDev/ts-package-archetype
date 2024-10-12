@@ -1,0 +1,11 @@
+## IntelliJ files
+/.idea
+*.iml
+/bamboo-specs/.idea
+/bamboo-specs/*.iml
+
+/.vscode/
+.DS_Store
+*.log
+
+node_modules/
